@@ -3,11 +3,7 @@ import './style.css';
 function SenDataToApp() {
     async function openScanQR() {
         window.ReactNativeWebView?.postMessage(
-            JSON.stringify(
-                {
-                    "method": "scan_qr"
-                }
-            )
+        "a"
         )
     }
 
