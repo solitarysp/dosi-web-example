@@ -13,6 +13,7 @@ function App() {
                 <div className="wrapper">
                     <Switch>
                         <Route path={"/"} exact component={SenDataToApp} />
+                        <Route path={"/send_data_to_app"} exact component={SenDataToApp} />
                     </Switch>
                 </div>
 

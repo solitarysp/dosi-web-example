@@ -15,13 +15,7 @@ function Header() {
                             <NavLink to="/" exact activeStyle={{ color: '#2a6496' }}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/about" exact activeStyle={{ color: '#2a6496' }}>About</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact" exact activeStyle={{ color: '#2a6496' }}>Contact</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/listview" exact activeStyle={{ color: '#2a6496' }}>List View</NavLink>
+                            <NavLink to="/send_data_to_app" exact activeStyle={{ color: '#2a6496' }}>Send Data to app</NavLink>
                         </li>
                     </ul>
                 </div>
