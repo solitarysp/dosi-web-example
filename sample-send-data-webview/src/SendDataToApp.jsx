@@ -10,12 +10,41 @@ function SenDataToApp() {
         window.ReactNativeWebView?.postMessage(data)
     }
 
+    async function hideMenu() {
+        var data = JSON.stringify(
+            {
+                "method": "menu_control",
+                "data": false
+
+            }
+        );
+        window.ReactNativeWebView?.postMessage(data)
+    }
+
+    async function showMenu() {
+        var data = JSON.stringify(
+            {
+                "method": "menu_control",
+                "data": true
+            }
+        );
+        window.ReactNativeWebView?.postMessage(data)
+    }
+
     return (
         <div className="container">
             <h1>Send Data to app</h1>
             <div>
                 <button onClick={openScanQR}>
                     Open Scan QR
+                </button>
+            </div>
+            <div>
+                <button onClick={hideMenu}>
+                    HideMenu
+                </button>
+                <button onClick={showMenu}>
+                    ShowMenu
                 </button>
             </div>
         </div>
