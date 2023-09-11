@@ -32,7 +32,11 @@ function SenDataToApp() {
     }
 
     return (
-        <div className="container">
+        <div className="container" style={
+            {
+                minHeight: 400
+            }
+        }>
             <h1>Send Data to app</h1>
             <div>
                 <button onClick={openScanQR}>
