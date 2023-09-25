@@ -58,6 +58,9 @@ function SenDataToApp() {
                 <a href={'https://www.youtube.com/shorts/IqPLC7dMijY'}>
                     Open youtube
                 </a>
+                <a href={'https://metamask.app.link/dapp/wallet.dosi.world'}>
+                    https://metamask.app.link/dapp/wallet.dosi.world
+                </a>
             </div>
         </div>
     )
