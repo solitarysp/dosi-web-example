@@ -16,6 +16,7 @@ function Header() {
                         </li>
                         <li>
                             <NavLink to="/send_data_to_app" exact activeStyle={{ color: '#2a6496' }}>Send Data to app</NavLink>
+                            <NavLink to="/ShouldStartLoadWithRequest" exact activeStyle={{ color: '#2a6496' }}>Should Start Load With Request</NavLink>
                         </li>
                     </ul>
                 </div>
