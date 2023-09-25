@@ -43,6 +43,7 @@ function SenDataToApp() {
                     Open Scan QR
                 </button>
             </div>
+            <br/>
             <div>
                 <button onClick={hideMenu}>
                     HideMenu
@@ -50,6 +51,13 @@ function SenDataToApp() {
                 <button onClick={showMenu}>
                     ShowMenu
                 </button>
+            </div>
+            <br/>
+
+            <div>
+                <a href={'https://www.youtube.com/shorts/IqPLC7dMijY'}>
+                    Open youtube
+                </a>
             </div>
         </div>
     )
