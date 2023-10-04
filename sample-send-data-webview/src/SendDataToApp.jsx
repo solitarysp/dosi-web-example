@@ -1,6 +1,10 @@
 import './style.css';
 
 function SenDataToApp() {
+    window.addEventListener("message", message => {
+        console.log(message.data)
+    });
+
     async function openScanQR() {
         var data = JSON.stringify(
             {
