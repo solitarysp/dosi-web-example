@@ -3,7 +3,7 @@ import './style.css';
 function SenDataToApp() {
     window.addEventListener("message", message => {
         const data = JSON.parse(message.data)
-        console.log("Method: {}, data:{}",data.method,data.data)
+        alert("Method: "+data.method+", data: "+data.data)
     });
 
     async function openScanQR() {
