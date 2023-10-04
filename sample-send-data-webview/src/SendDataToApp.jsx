@@ -25,6 +25,16 @@ function SenDataToApp() {
         );
         window.ReactNativeWebView?.postMessage(data)
     }
+    async function sendDataAppToWebview() {
+        var data = JSON.stringify(
+            {
+                "method": "sendDataAppToWebview",
+                "data": false
+
+            }
+        );
+        window.ReactNativeWebView?.postMessage(data)
+    }
 
     async function showMenu() {
         var data = JSON.stringify(
@@ -42,7 +52,7 @@ function SenDataToApp() {
                 minHeight: 400
             }
         }>
-            <h1>Send Data to app</h1>
+            <h1>Send Data to app & App to webview</h1>
             <div>
                 <button onClick={openScanQR}>
                     Open Scan QR
@@ -55,6 +65,11 @@ function SenDataToApp() {
                 </button>
                 <button onClick={showMenu}>
                     ShowMenu
+                </button>
+            </div>
+            <div>
+                <button onClick={sendDataAppToWebview}>
+                    Send Data App To webview
                 </button>
             </div>
             <br/>
