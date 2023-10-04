@@ -2,6 +2,7 @@ import './style.css';
 
 function SenDataToApp() {
     window.addEventListener("message", message => {
+        alert(message.data)
         console.log(message.data)
     });
 
