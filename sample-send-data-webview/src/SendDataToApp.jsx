@@ -2,8 +2,8 @@ import './style.css';
 
 function SenDataToApp() {
     window.addEventListener("message", message => {
-        alert(message.data)
-        console.log(message.data)
+        const data = JSON.parse(message.data)
+        console.log("Method: {}, data:{}",data.method,data.data)
     });
 
     async function openScanQR() {
@@ -25,6 +25,7 @@ function SenDataToApp() {
         );
         window.ReactNativeWebView?.postMessage(data)
     }
+
     async function sendDataAppToWebview() {
         var data = JSON.stringify(
             {
