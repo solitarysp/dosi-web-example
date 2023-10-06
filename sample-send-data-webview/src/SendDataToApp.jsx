@@ -19,8 +19,9 @@ function SenDataToApp() {
         var data = JSON.stringify(
             {
                 "method": "menu_control",
-                "data": false
-
+                "data": {
+                    "show": false
+                }
             }
         );
         window.ReactNativeWebView?.postMessage(data)
@@ -41,7 +42,9 @@ function SenDataToApp() {
         var data = JSON.stringify(
             {
                 "method": "menu_control",
-                "data": true
+                "data": {
+                    "show": false
+                }
             }
         );
         window.ReactNativeWebView?.postMessage(data)
