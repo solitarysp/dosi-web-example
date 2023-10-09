@@ -43,7 +43,7 @@ function SenDataToApp() {
             {
                 "method": "menu_control",
                 "data": {
-                    "show": false
+                    "show": true
                 }
             }
         );
