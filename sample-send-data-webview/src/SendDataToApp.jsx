@@ -64,6 +64,9 @@ function SenDataToApp() {
                 <button onClick={openNavigate('qrScan')}>
                     Open Scan QR
                 </button>
+                <button onClick={openNavigate('send')}>
+                    Open Send
+                </button>
             </div>
             <br/>
             <div>
