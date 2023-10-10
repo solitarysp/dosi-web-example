@@ -33,9 +33,13 @@ function SenDataToApp() {
     async function sendDataAppToWebview() {
         var data = JSON.stringify(
             {
-                "method": "sendDataAppToWebview",
-                "data": false
-
+                "id": "11",
+                "method": "test",
+                "data": {
+                    "id": "11",
+                    "method": "test-app-to-webview",
+                    "data": "data test"
+                }
             }
         );
         window.ReactNativeWebView?.postMessage(data)
