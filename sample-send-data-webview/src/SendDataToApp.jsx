@@ -61,10 +61,10 @@ function SenDataToApp() {
         }>
             <h1>Send Data to app & App to webview</h1>
             <div>
-                <button onClick={openNavigate('qrScan')}>
+                <button onClick={() => openNavigate('qrScan')}>
                     Open Scan QR
                 </button>
-                <button onClick={openNavigate('send')}>
+                <button onClick={() => openNavigate('send')}>
                     Open Send
                 </button>
             </div>
