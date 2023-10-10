@@ -3,13 +3,16 @@ import './style.css';
 function SenDataToApp() {
     window.addEventListener("message", message => {
         const data = JSON.parse(message.data)
-        alert("Method: "+data.method+", data: "+data.data)
+        alert("Method: " + data.method + ", data: " + data.data)
     });
 
-    async function openScanQR() {
+    async function openNavigate(target) {
         var data = JSON.stringify(
             {
-                "method": "scan_qr"
+                "method": "navigate",
+                "data": {
+                    "target": target
+                }
             }
         );
         window.ReactNativeWebView?.postMessage(data)
@@ -58,7 +61,7 @@ function SenDataToApp() {
         }>
             <h1>Send Data to app & App to webview</h1>
             <div>
-                <button onClick={openScanQR}>
+                <button onClick={openNavigate('qrScan')}>
                     Open Scan QR
                 </button>
             </div>
