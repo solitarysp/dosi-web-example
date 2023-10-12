@@ -7,7 +7,7 @@ function SenDataToApp() {
     });
 
     async function openNavigate(target) {
-        await dosiVault.webviewAction("navigate", {
+        dosiVault.webviewAction("navigate", {
                 id: "id",
                 data: {target: target}
             }
@@ -15,7 +15,7 @@ function SenDataToApp() {
     }
 
     async function hideMenu() {
-        await dosiVault.webviewAction("menuControl", {
+        dosiVault.webviewAction("menuControl", {
                 id: "id",
                 data: {show: false}
             }
@@ -23,7 +23,7 @@ function SenDataToApp() {
     }
 
     async function sendDataAppToWebview() {
-        await dosiVault.webviewAction("test", {
+        dosiVault.webviewAction("test", {
                 id: "id",
                 data: {
                     "id": "11",
@@ -35,7 +35,7 @@ function SenDataToApp() {
     }
 
     async function showMenu() {
-        await dosiVault.webviewAction("menuControl", {
+        dosiVault.webviewAction("menuControl", {
                 id: "id",
                 data: {show: true}
             }
