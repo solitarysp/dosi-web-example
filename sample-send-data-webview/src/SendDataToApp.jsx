@@ -7,55 +7,39 @@ function SenDataToApp() {
     });
 
     async function openNavigate(target) {
-        // var data = JSON.stringify(
-        //     {
-        //         "method": "navigate",
-        //         "data": {
-        //             "target": target
-        //         }
-        //     }
-        // );
-        // window.ReactNativeWebView?.postMessage(data)
-        await dosiVault.webviewAction("navigate", {data: {target: target}});
+        await dosiVault.webviewAction("navigate", {
+                id: "id",
+                data: {target: target}
+            }
+        );
     }
 
     async function hideMenu() {
-        var data = JSON.stringify(
-            {
-                "method": "menu_control",
-                "data": {
-                    "show": false
-                }
+        await dosiVault.webviewAction("menu_control", {
+                id: "id",
+                data: {show: false}
             }
         );
-        window.ReactNativeWebView?.postMessage(data)
     }
 
     async function sendDataAppToWebview() {
-        var data = JSON.stringify(
-            {
-                "id": "11",
-                "method": "test",
-                "data": {
+        await dosiVault.webviewAction("test", {
+                id: "id",
+                data: {
                     "id": "11",
                     "method": "test-app-to-webview",
                     "data": "data test"
                 }
             }
         );
-        window.ReactNativeWebView?.postMessage(data)
     }
 
     async function showMenu() {
-        var data = JSON.stringify(
-            {
-                "method": "menu_control",
-                "data": {
-                    "show": true
-                }
+        await dosiVault.webviewAction("menu_control", {
+                id: "id",
+                data: {show: true}
             }
         );
-        window.ReactNativeWebView?.postMessage(data)
     }
 
     return (
