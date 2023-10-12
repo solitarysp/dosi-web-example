@@ -5,7 +5,7 @@ import './style.css';
 function Footer() {
     return (
         <div className="footer">
-            <h4>Footer: 2.0</h4>
+            <h4>Footer: 3.0</h4>
         </div>
     )
 }

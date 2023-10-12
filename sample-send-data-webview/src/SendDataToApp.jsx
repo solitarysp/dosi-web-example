@@ -7,15 +7,16 @@ function SenDataToApp() {
     });
 
     async function openNavigate(target) {
-        var data = JSON.stringify(
-            {
-                "method": "navigate",
-                "data": {
-                    "target": target
-                }
-            }
-        );
-        window.ReactNativeWebView?.postMessage(data)
+        // var data = JSON.stringify(
+        //     {
+        //         "method": "navigate",
+        //         "data": {
+        //             "target": target
+        //         }
+        //     }
+        // );
+        // window.ReactNativeWebView?.postMessage(data)
+        await dosiVault.webviewAction("navigate", {data: {target: target}});
     }
 
     async function hideMenu() {
