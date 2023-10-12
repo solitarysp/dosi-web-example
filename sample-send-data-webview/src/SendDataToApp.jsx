@@ -15,7 +15,7 @@ function SenDataToApp() {
     }
 
     async function hideMenu() {
-        await dosiVault.webviewAction("menu_control", {
+        await dosiVault.webviewAction("menuControl", {
                 id: "id",
                 data: {show: false}
             }
@@ -35,7 +35,7 @@ function SenDataToApp() {
     }
 
     async function showMenu() {
-        await dosiVault.webviewAction("menu_control", {
+        await dosiVault.webviewAction("menuControl", {
                 id: "id",
                 data: {show: true}
             }
