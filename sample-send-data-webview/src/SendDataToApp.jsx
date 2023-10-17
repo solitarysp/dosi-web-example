@@ -8,38 +8,48 @@ function SenDataToApp() {
 
     async function openNavigate(target) {
         dosiVault.webviewAction("navigate", {
-                id: "id",
-                data: {target: target}
+                target: target
             }
         );
     }
 
     async function hideMenu() {
-        dosiVault.webviewAction("menuControl", {
-                id: "id",
-                data: {show: false}
+        const data = await dosiVault.webviewAction("menuControl", {
+                show: false
             }
         );
+        alert(" data: " + JSON.stringify(data))
+
     }
 
     async function sendDataAppToWebview() {
-        dosiVault.webviewAction("test", {
+        const data = dosiVault.webviewAction("test", {
                 id: "id",
                 data: {
-                    "id": "11",
-                    "method": "test-app-to-webview",
-                    "data": "data test"
+                    "name": "dosi vault"
                 }
             }
         );
+        console.log(data.data.name);
     }
 
     async function showMenu() {
-        dosiVault.webviewAction("menuControl", {
-                id: "id",
-                data: {show: true}
+        const data = await dosiVault.webviewAction("menuControl", {
+                show: true
             }
         );
+        alert(" data: " + JSON.stringify(data))
+    }
+
+    async function openIAB(url) {
+       try {
+           await dosiVault.webviewAction("openIAB", {
+                   url: url
+               }
+           );
+       }catch (e) {
+           alert(e.message)
+       }
     }
 
     return (
@@ -55,6 +65,11 @@ function SenDataToApp() {
                 </button>
                 <button onClick={() => openNavigate('send')}>
                     Open Send
+                </button>
+            </div>
+            <div>
+                <button onClick={() => openIAB('https://www.google.com/')}>
+                    Open IAB
                 </button>
             </div>
             <br/>
