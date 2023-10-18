@@ -69,6 +69,9 @@ function SenDataToApp() {
                 <button onClick={() => openNavigate('doLogin')}>
                     Do Login
                 </button>
+                <button onClick={() => openNavigate('creatFNSAeWallet')}>
+                    Do Set password
+                </button>
             </div>
             <div>
                 <button onClick={() => openIAB('https://www.google.com/')}>
