@@ -66,6 +66,9 @@ function SenDataToApp() {
                 <button onClick={() => openNavigate('send')}>
                     Open Send
                 </button>
+                <button onClick={() => openNavigate('doLogin')}>
+                    Do Login
+                </button>
             </div>
             <div>
                 <button onClick={() => openIAB('https://www.google.com/')}>
