@@ -51,6 +51,15 @@ function SenDataToApp() {
            alert(e.message)
        }
     }
+    async function logout() {
+       try {
+           await dosiVault.webviewAction("logout", {
+               }
+           );
+       }catch (e) {
+           alert(e.message)
+       }
+    }
 
     return (
         <div className="container" style={
@@ -79,6 +88,11 @@ function SenDataToApp() {
             <div>
                 <button onClick={() => openIAB('https://www.google.com/')}>
                     Open IAB
+                </button>
+            </div>
+            <div>
+                <button onClick={() => logout()}>
+                    Logout
                 </button>
             </div>
             <br/>
