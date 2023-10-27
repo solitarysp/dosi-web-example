@@ -1,4 +1,5 @@
 import './style.css';
+import {useCallback, useState} from "react";
 
 function SenDataToApp() {
     window.addEventListener("message", message => {
@@ -139,6 +140,23 @@ function SenDataToApp() {
 
                 <button onClick={() => unlock()}>
                     Unlock
+                </button>
+            </div>
+            <div>
+                <h5>Biometrics test</h5>
+                Service: <input defaultValue={biometricsTestService}
+                                onChange={e => setBiometricsTestService(e.target.value)}/>
+                <br/>
+                password: <input defaultValue={biometricsTestPassword}
+                                 onChange={e => setBiometricsTestPassword(e.target.value)}/>
+                <br/>
+
+                <button onClick={() => biometricsTest("create")}>
+                    Create
+                </button>
+
+                <button onClick={() => biometricsTest("verify")}>
+                    verify
                 </button>
             </div>
             <br/>
