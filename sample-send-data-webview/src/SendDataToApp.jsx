@@ -73,6 +73,33 @@ function SenDataToApp() {
         }
     }
 
+    const [biometricsTestService, setBiometricsTestService] = useState('service_1')
+    const [biometricsTestPassword, setBiometricsTestPassword] = useState('password_1')
+
+    const biometricsTest = useCallback(async (method) => {
+        try {
+            if (method === "create") {
+                console.log(biometricsTestPassword)
+                await dosiVault.webviewAction("BiometricsMessageTestData", {
+                        method: "create",
+                        service: biometricsTestService,
+                        password: biometricsTestPassword
+                    }
+                );
+            }
+            if (method === "verify") {
+                console.log(biometricsTestPassword)
+                await dosiVault.webviewAction("BiometricsMessageTestData", {
+                        method: "verify",
+                        service: biometricsTestService,
+                    }
+                );
+            }
+        } catch (e) {
+            console.log("Error unlock")
+        }
+    }, [biometricsTestService, biometricsTestPassword]);
+
     return (
         <div className="container" style={
             {
