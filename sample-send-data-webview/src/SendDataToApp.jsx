@@ -2,8 +2,8 @@ import './style.css';
 
 function SenDataToApp() {
     window.addEventListener("message", message => {
-        const data = JSON.parse(message.data)
-        alert("Method: " + data.method + ", data: " + data.data)
+        // const data = JSON.parse(message.data)
+        // alert("Method: " + data.method + ", data: " + data.data)
     });
 
     async function openNavigate(target) {
@@ -42,23 +42,34 @@ function SenDataToApp() {
     }
 
     async function openIAB(url) {
-       try {
-           await dosiVault.webviewAction("openIAB", {
-                   url: url
-               }
-           );
-       }catch (e) {
-           alert(e.message)
-       }
+        try {
+            await dosiVault.webviewAction("openIAB", {
+                    url: url
+                }
+            );
+        } catch (e) {
+            alert(e.message)
+        }
     }
+
     async function logout() {
-       try {
-           await dosiVault.webviewAction("logout", {
-               }
-           );
-       }catch (e) {
-           alert(e.message)
-       }
+        try {
+            await dosiVault.webviewAction("logout", {}
+            );
+        } catch (e) {
+            alert(e.message)
+        }
+    }
+
+    async function unlock() {
+        try {
+            console.log("Start unlock")
+            const result = await dosiVault.webviewAction("unlock", {}
+            );
+            console.log("Unlock Status: " + result)
+        } catch (e) {
+            console.log("Error unlock")
+        }
     }
 
     return (
@@ -67,14 +78,28 @@ function SenDataToApp() {
                 minHeight: 400
             }
         }>
-            <h1>Send Data to app & App to webview</h1>
             <div>
+                <h5>Open app from depplink</h5>
+                <a href={'https://dosivault.page.link/qL6j?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1'}>
+                    Open this page on dosi vault
+                </a>
+                <br/>
+                <a href={'https://dosivault.page.link/qL6j?uri_dapps= http://localhost:5173&efr=1'}>
+                    Open this page on dosi vault local
+                </a>
+            </div>
+            <div>
+                <h5>Common navigate</h5>
+
                 <button onClick={() => openNavigate('qrScan')}>
                     Open Scan QR
                 </button>
                 <button onClick={() => openNavigate('send')}>
                     Open Send
                 </button>
+            </div>
+            <div>
+                <h5>Flow login logout</h5>
                 <button onClick={() => openNavigate('doLogin')}>
                     Do Login
                 </button>
@@ -84,19 +109,41 @@ function SenDataToApp() {
                 <button onClick={() => openNavigate('ShareDMnemonicReveal')}>
                     ShareD
                 </button>
-            </div>
-            <div>
                 <button onClick={() => openIAB('https://www.google.com/')}>
                     Open IAB
                 </button>
-            </div>
-            <div>
                 <button onClick={() => logout()}>
                     Logout
                 </button>
             </div>
+            <div>
+                <h5>Main navigate</h5>
+                <button onClick={() => openNavigate('home')}>
+                    MENU HOME
+                </button>
+                <button onClick={() => openNavigate('barnd')}>
+                    MENU BARND
+                </button>
+                <button onClick={() => openNavigate('market')}>
+                    MENU MARKET
+                </button>
+                <button onClick={() => openNavigate('notice')}>
+                    MENU NOTICE
+                </button>
+                <button onClick={() => openNavigate('profile')}>
+                    MENU PROFILE
+                </button>
+            </div>
+            <div>
+                <h5>KeyRing</h5>
+
+                <button onClick={() => unlock()}>
+                    Unlock
+                </button>
+            </div>
             <br/>
             <div>
+                <h5>Menu Control</h5>
                 <button onClick={hideMenu}>
                     HideMenu
                 </button>
@@ -110,13 +157,7 @@ function SenDataToApp() {
                 </button>
             </div>
             <br/>
-            <a href={'app.dosivault://dapp?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1'}>
-                Open this page on dosi vault
-            </a>
-            <br/>
-            <a href={'app.dosivault://dapp?uri_dapps= http://localhost:5173&efr=1'}>
-                Open this page on dosi vault local
-            </a>
+
         </div>
     )
 }
