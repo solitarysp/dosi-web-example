@@ -108,11 +108,11 @@ function SenDataToApp() {
         }>
             <div>
                 <h5>Open app from depplink</h5>
-                <a href={'https://dosivault.page.link/qL6j?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1'}>
+                <a href={'app.dosivault://dapp?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1'}>
                     Open this page on dosi vault
                 </a>
                 <br/>
-                <a href={'https://dosivault.page.link/qL6j?uri_dapps= http://localhost:5173&efr=1'}>
+                <a href={'app.dosivault://dapp?uri_dapps= http://localhost:5173&efr=1'}>
                     Open this page on dosi vault local
                 </a>
             </div>
