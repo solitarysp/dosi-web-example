@@ -131,7 +131,7 @@ function SenDataToApp() {
                 <button onClick={() => openNavigate('doLogin')}>
                     Do Login
                 </button>
-                <button onClick={() => openNavigate('creatFNSAeWallet')}>
+                <button onClick={() => openNavigate('createFNSAWallet')}>
                     Do Set password
                 </button>
                 <button onClick={() => openNavigate('ShareDMnemonicReveal')}>
@@ -151,6 +151,13 @@ function SenDataToApp() {
 
                 }}>
                     Reqeust cookie
+                </button>
+                <button onClick={async () => {
+                    const result = await dosiVault.webviewAction("verifyPhone");
+                    console.log(result)
+
+                }}>
+                    verifyPhone
                 </button>
             </div>
             <div>
