@@ -143,6 +143,15 @@ function SenDataToApp() {
                 <button onClick={() => logout()}>
                     Logout
                 </button>
+                <button onClick={async () => {
+                    const result = await dosiVault.webviewAction("noSession", {
+                        currentUrl: "https://dosi-members.line-apps-alpha.com"
+                    });
+                    console.log(result)
+
+                }}>
+                    Reqeust cookie
+                </button>
             </div>
             <div>
                 <h5>Main navigate</h5>
@@ -167,6 +176,22 @@ function SenDataToApp() {
 
                 <button onClick={() => unlock()}>
                     Unlock
+                </button>
+            </div>
+            <div>
+                <h5>Phone verify</h5>
+
+                <button onClick={async () => {
+                    const result = await dosiVault.webviewAction("phoneVerifyEnterPassword");
+                    console.log("phoneVerifyEnterPassword: " + result);
+                }}>
+                    phoneVerifyEnterPassword
+                </button>
+                <button onClick={async () => {
+                    const result = await dosiVault.webviewAction("phoneVerifyLogoutAndLogin");
+                    console.log("phoneVerifyLogoutAndLogin: " + result);
+                }}>
+                    phoneVerifyLogoutAndLogin
                 </button>
             </div>
             <div>
