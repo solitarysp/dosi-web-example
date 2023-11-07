@@ -3,8 +3,9 @@ import {useCallback, useState} from "react";
 
 function SenDataToApp() {
     window.addEventListener("message", message => {
-        // const data = JSON.parse(message.data)
-        // alert("Method: " + data.method + ", data: " + data.data)
+        if(message?.data){
+            console.log("Local: "+message.data)
+        }
     });
 
     async function openNavigate(target) {
@@ -158,6 +159,12 @@ function SenDataToApp() {
 
                 }}>
                     verifyPhone
+                </button>
+                <button onClick={async () => {
+                    window.location.href ="app.dosivault.oauth://login"
+
+                }}>
+                    Test login broser app.dosivault.oauth :
                 </button>
             </div>
             <div>
