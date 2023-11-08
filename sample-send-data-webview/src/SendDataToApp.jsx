@@ -8,11 +8,19 @@ function SenDataToApp() {
         }
     });
 
-    async function openNavigate(target) {
+    async function openNavigate(target, parameter) {
+      if (parameter) {
+        dosiVault.webviewAction("navigate", {
+                target: target,
+                data: parameter
+            }
+        );
+      } else {
         dosiVault.webviewAction("navigate", {
                 target: target
             }
         );
+      }
     }
 
     async function hideMenu() {
@@ -183,6 +191,49 @@ function SenDataToApp() {
                 </button>
                 <button onClick={() => openNavigate('profile')}>
                     MENU PROFILE
+                </button>
+                <button onClick={() => openNavigate('staking')}>
+                    Staking
+                </button>
+                <button onClick={() => openNavigate('walletAddressBook')}>
+                    WalletAddressBook
+                </button>
+                <button onClick={() => openNavigate('walletAddressList')}>
+                    WalletAddressList
+                </button>
+                <button onClick={() => openNavigate('notificationSettings')}>
+                    NotificationSettings
+                </button>
+                <button onClick={() => openNavigate('notification')}>
+                    Notification
+                </button>
+                <button onClick={() => openNavigate('setting')}>
+                    Setting
+                </button>
+                <button onClick={() => openNavigate('about')}>
+                    About
+                </button>
+                <button onClick={() => openNavigate('help')}>
+                    Help
+                </button>
+                <button onClick={() => openNavigate('deleteAccount')}>
+                    DeleteAccount
+                </button>
+                <button onClick={() => openNavigate('security')}>
+                    Security
+                </button>
+                <button onClick={() => openNavigate('send')}>
+                    Send
+                </button>
+                <button onClick={() => openNavigate('receive')}>
+                    Receive
+                </button>
+                <button onClick={() => openNavigate('charge', {
+                  exchangeId: "BITMAX",
+                  coinType: "FNSA",
+                  walletAddress: "link1fwadqlcn3jre04jfrlxy9vpl583dydqwwrvjxj"
+                })}>
+                    Charge
                 </button>
             </div>
             <div>
