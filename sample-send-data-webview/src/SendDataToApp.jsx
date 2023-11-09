@@ -180,8 +180,8 @@ function SenDataToApp() {
                 <button onClick={() => openNavigate('home')}>
                     MENU HOME
                 </button>
-                <button onClick={() => openNavigate('barnd')}>
-                    MENU BARND
+                <button onClick={() => openNavigate('brand')}>
+                    MENU BRAND
                 </button>
                 <button onClick={() => openNavigate('market')}>
                     MENU MARKET
