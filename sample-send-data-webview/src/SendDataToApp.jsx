@@ -125,6 +125,8 @@ function SenDataToApp() {
         >
           Open this page on dosi vault
         </a>
+        <a href={"https://dosivault.page.link/qL6j?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link</a>
+
         <br />
         <a href={"app.dosivault://dapp?uri_dapps= http://localhost:5173&efr=1"}>Open this page on dosi vault local</a>
       </div>
@@ -164,7 +166,14 @@ function SenDataToApp() {
             window.location.href = "app.dosivault.oauth://login";
           }}
         >
-          Test login broser app.dosivault.oauth :
+          Test login app.dosivault.oauth :
+        </button>
+        <button
+          onClick={async () => {
+            window.location.href = "app.dosivault://qrLogin?state=RvmSvr4Gr_-eCkLaZz4WWVtP4Rj0zErf0XhNtzObmug";
+          }}
+        >
+          QR login web PC
         </button>
       </div>
       <div>
@@ -213,6 +222,26 @@ function SenDataToApp() {
           }}
         >
           phoneVerifyEnterPassword
+        </button>
+        <button
+          onClick={async () => {
+            const result = await dosiVault.webviewAction("phoneVerifyLogoutAndLogin");
+            console.log("phoneVerifyLogoutAndLogin: " + result);
+          }}
+        >
+          phoneVerifyLogoutAndLogin
+        </button>
+      </div>
+      <div>
+        <h5>Wallet address</h5>
+
+        <button
+          onClick={async () => {
+            const result = await dosiVault.webviewAction("getDefaultWallet");
+            console.log("phoneVerifyEnterPassword: " + result);
+          }}
+        >
+            getDefaultWallet
         </button>
         <button
           onClick={async () => {
