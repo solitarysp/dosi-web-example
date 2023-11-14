@@ -125,6 +125,7 @@ function SenDataToApp() {
         >
           Open this page on dosi vault
         </a>
+          <br />
         <a href={"https://dosivault.page.link/qL6j?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link</a>
 
         <br />
