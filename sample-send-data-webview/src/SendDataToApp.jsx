@@ -248,11 +248,13 @@ function SenDataToApp() {
         </button>
         <button
           onClick={async () => {
-            const result = await dosiVault.webviewAction("phoneVerifyLogoutAndLogin");
+            const result = await dosiVault.webviewAction("updateDefaultWallet", {
+              value: "link1r2jrwejhk7wkhnl2arty572pj7nw6wzv08040u"
+            });
             console.log("phoneVerifyLogoutAndLogin: " + result);
           }}
         >
-          phoneVerifyLogoutAndLogin
+          updateDefaultWallet
         </button>
       </div>
       <div>
