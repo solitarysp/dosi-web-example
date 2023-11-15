@@ -81,7 +81,7 @@ function SenDataToApp() {
       try {
         if (method === "create") {
           console.log(biometricsTestPassword);
-          await dosiVault.webviewAction("BiometricsMessageTestData", {
+          await dosiVault.webviewAction("test", {
             method: "create",
             service: biometricsTestService,
             password: biometricsTestPassword,
@@ -89,8 +89,22 @@ function SenDataToApp() {
         }
         if (method === "verify") {
           console.log(biometricsTestPassword);
-          await dosiVault.webviewAction("BiometricsMessageTestData", {
+          await dosiVault.webviewAction("test", {
             method: "verify",
+            service: biometricsTestService,
+          });
+        }
+        if (method === "check_service_exists") {
+          console.log(biometricsTestPassword);
+          await dosiVault.webviewAction("test", {
+            method: "check_service_exists",
+            service: biometricsTestService,
+          });
+        }
+        if (method === "delete") {
+          console.log(biometricsTestPassword);
+          await dosiVault.webviewAction("test", {
+            method: "delete",
             service: biometricsTestService,
           });
         }
@@ -267,6 +281,8 @@ function SenDataToApp() {
         <br />
         <button onClick={() => biometricsTest("create")}>Create</button>
         <button onClick={() => biometricsTest("verify")}>verify</button>
+        <button onClick={() => biometricsTest("check_service_exists")}>check service exists</button>
+        <button onClick={() => biometricsTest("delete")}>delete service</button>
       </div>
       <br />
       <div>
