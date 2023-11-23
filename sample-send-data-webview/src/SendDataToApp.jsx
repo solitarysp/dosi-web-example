@@ -194,6 +194,11 @@ function SenDataToApp() {
         </button>
       </div>
       <div>
+        <h5>Main navigate deeplink</h5>
+        <a href={"https://dosivault.page.link/muUh?navigation=profile-my-info"}>Profile account</a>
+
+      </div>
+      <div>
         <h5>Main navigate</h5>
         <button onClick={() => openNavigate("home")}>MENU HOME</button>
         <button onClick={() => openNavigate("brand")}>MENU BRAND</button>
@@ -228,6 +233,15 @@ function SenDataToApp() {
         <h5>KeyRing</h5>
 
         <button onClick={() => unlock()}>Unlock</button>
+
+        <button
+            onClick={async () => {
+              const result = await dosiVault.webviewAction("getKeyRingStatus");
+              console.log("getKeyRingStatus: " + result);
+            }}
+        >
+          getKeyRingStatus
+        </button>
       </div>
       <div>
         <h5>Phone verify</h5>
