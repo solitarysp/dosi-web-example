@@ -134,22 +134,22 @@ function SenDataToApp() {
         <h5>Open app from depplink</h5>
         <a
           href={
-            "app.dosivault://dapp?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1"
+            "app.dosi://dapp?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1"
           }
         >
           Open this page on dosi vault
         </a>
           <br />
-        <a href={"https://dosivault.page.link/qL6j?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link</a>
+        <a href={"https://dosi.page.link/qL6j?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link</a>
         <br />
-        <a href={"https://dosivault.page.link/qL6j"}>https://dosivault.page.link/qL6j</a>
+        <a href={"https://dosi.page.link/qL6j"}>https://dosivault.page.link/qL6j</a>
         <br />
         <a href={"https://isod.page.link/Scq6"}>https://isod.page.link/Scq6</a>
         <br />
-        <a href={"https://dosivault.page.link/muUh?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link beta</a>
+        <a href={"https://dosi.page.link/muUh?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link beta</a>
 
         <br />
-        <a href={"app.dosivault://dapp?uri_dapps= http://localhost:5173&efr=1"}>Open this page on dosi vault local</a>
+        <a href={"app.dosi://dapp?uri_dapps= http://localhost:5173&efr=1"}>Open this page on dosi vault local</a>
       </div>
       <div>
         <h5>Common navigate</h5>
