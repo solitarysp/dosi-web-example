@@ -151,7 +151,7 @@ function SenDataToApp() {
         <br />
         <a href={"app.dosi://dapp?uri_dapps= http://localhost:5173&efr=1"}>Open this page on dosi vault local</a>
         <br />
-        <a href={"https://nid.naver.com/oauth2.0/authorize?client_id=Wq6NfLoV4tXJk2gVvkTM&redirect_uri=https://dosi-members.line-apps-beta.com/api/v2/oauth/callback&response_type=code"}>Test naver logn</a>
+        <a href={"https://nid.naver.com/oauth2.0/authorize?client_id=Wq6NfLoV4tXJk2gVvkTM&redirect_uri=https://dosi-members.line-apps-beta.com/api/v2/oauth/callback&response_type=code"}>Test naver logn1</a>
       </div>
       <div>
         <h5>Common navigate</h5>
