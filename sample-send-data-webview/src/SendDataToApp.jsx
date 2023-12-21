@@ -223,6 +223,9 @@ function SenDataToApp() {
         <button onClick={() => openNavigate("security")}>Security</button>
         <button onClick={() => openNavigate("send")}>Send</button>
         <button onClick={() => openNavigate("receive")}>Receive</button>
+        <button onClick={() => {
+          dosiVault.webviewAction("showModal", {"name":"payment"});
+        }}>Modal Payment</button>
         <button
           onClick={() =>
             openNavigate("charge", {
