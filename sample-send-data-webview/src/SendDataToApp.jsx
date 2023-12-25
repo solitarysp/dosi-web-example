@@ -155,6 +155,7 @@ function SenDataToApp() {
       </div>
       <div>
         <h5>Common navigate</h5>
+        <a href={"https://isod.page.link/Scq6?uri_dapps=https://google.com"}>Payment deeplink</a>
 
         <button onClick={() => openNavigate("qrScan")}>Open Scan QR</button>
         <button onClick={() => openNavigate("send")}>Open Send</button>
