@@ -155,7 +155,6 @@ function SenDataToApp() {
       </div>
       <div>
         <h5>Common navigate</h5>
-        <a href={"https://isod.page.link/Scq6?uri_dapps=https://google.com"}>Payment deeplink</a>
 
         <button onClick={() => openNavigate("qrScan")}>Open Scan QR</button>
         <button onClick={() => openNavigate("send")}>Open Send</button>
@@ -187,14 +186,14 @@ function SenDataToApp() {
         </button>
         <button
           onClick={async () => {
-            window.location.href = "app.dosivault.oauth://login";
+            window.location.href = "app.dosi.oauth://login";
           }}
         >
-          Test login app.dosivault.oauth :
+          Test login app.dosi.oauth :
         </button>
         <button
           onClick={async () => {
-            window.location.href = "app.dosivault://qrLogin?state=RvmSvr4Gr_-eCkLaZz4WWVtP4Rj0zErf0XhNtzObmug";
+            window.location.href = "app.dosi://qrLogin?state=RvmSvr4Gr_-eCkLaZz4WWVtP4Rj0zErf0XhNtzObmug";
           }}
         >
           QR login web PC
@@ -238,6 +237,10 @@ function SenDataToApp() {
         >
           Charge
         </button>
+
+        <a href={"https://isod.page.link/Scq6?uri_dapps=https://google.com"}>Payment deeplink dynamic</a>
+        <br/>
+        <a href={"app.dosi://dapp?uri_dapps=https://google.com"}>Payment deeplink</a>
       </div>
       <div>
         <h5>KeyRing</h5>
