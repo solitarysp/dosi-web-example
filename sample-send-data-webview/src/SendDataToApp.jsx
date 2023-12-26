@@ -193,7 +193,7 @@ function SenDataToApp() {
         </button>
         <button
           onClick={async () => {
-            window.location.href = "app.dosi://qrLogin?state=RvmSvr4Gr_-eCkLaZz4WWVtP4Rj0zErf0XhNtzObmug";
+            window.location.href = "app.dosi://qrLogin?state=H7c4-GUzqfpcWo045IZO6UauVCGIKbSvfHMDQ8gnCb0";
           }}
         >
           QR login web PC
