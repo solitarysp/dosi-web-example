@@ -201,7 +201,7 @@ function SenDataToApp() {
       </div>
       <div>
         <h5>Main navigate deeplink</h5>
-        <a href={"https://dosivault.page.link/muUh?navigation=profile-my-info"}>Profile account</a>
+        <a href={"app.dosi:navigation?navigation=profile-my-info"}>Profile account</a>
 
       </div>
       <div>
