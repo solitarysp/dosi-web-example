@@ -132,6 +132,16 @@ function SenDataToApp() {
     >
       <div>
         <h5>Open app from depplink</h5>
+
+        <a
+            target="_blank"
+            href={
+              "https://google.com"
+            }
+        >
+          Open IAB Google
+        </a>
+        <br />
         <a
           href={
             "app.dosi://dapp?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1"
