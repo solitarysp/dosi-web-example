@@ -142,6 +142,8 @@ function SenDataToApp() {
           Open IAB Google
         </a>
         <br />
+        <a href={"https://myisod.page.link/qL6j"}>https://myisod.page.link/qL6j</a>
+        <br />
         <a
           href={
             "app.dosi://dapp?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com&efr=1"
@@ -154,7 +156,7 @@ function SenDataToApp() {
         <br />
         <a href={"https://dosivault.page.link/qL6j"}>https://dosivault.page.link/qL6j</a>
         <br />
-        <a href={"https://isod.page.link/Scq6"}>https://isod.page.link/Scq6</a>
+        <a href={"https://myisod.page.link/Scq6"}>https://isod.page.link/Scq6</a>
         <br />
         <a href={"https://dosi.page.link/muUh?uri_dapps=https://sample-send-data-webview-lv00212.website.line-apps-dev.com"}>Open this page by dynamic link beta</a>
 
