@@ -141,6 +141,14 @@ function SenDataToApp() {
         >
           Open IAB Google
         </a>
+        <a
+            target="_blank"
+            href={
+              "https://universal-link-dosi-app-test.website.line-apps-dev.com/"
+            }
+        >
+          https://universal-link-dosi-app-test.website.line-apps-dev.com/
+        </a>
         <br />
         <a href={"https://myisod.page.link/qL6j"}>https://myisod.page.link/qL6j</a>
         <br />
