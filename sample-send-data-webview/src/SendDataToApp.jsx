@@ -144,10 +144,10 @@ function SenDataToApp() {
         <br />
         <a
             href={
-              "https://universal-link-dosi-app-test.website.line-apps-dev.com/"
+              "https://dosi-app-test.thanhlv.com"
             }
         >
-          https://universal-link-dosi-app-test.website.line-apps-dev.com/
+          https://dosi-app-test.thanhlv.com
         </a>
         <br />
         <a href={"https://myisod.page.link/qL6j"}>https://myisod.page.link/qL6j</a>
