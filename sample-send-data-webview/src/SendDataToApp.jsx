@@ -150,6 +150,14 @@ function SenDataToApp() {
           https://dosi-app-test.thanhlv.com
         </a>
         <br />
+        <a
+            href={
+              "https://dosi-app-test.thanhlv.com/dosi?uri_dapps=https://google.com"
+            }
+        >
+          https://dosi-app-test.thanhlv.com/dosi?uri_dapps=https://google.com
+        </a>
+        <br/>
         <a href={"https://myisod.page.link/qL6j"}>https://myisod.page.link/qL6j</a>
         <br />
         <a
