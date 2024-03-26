@@ -152,6 +152,14 @@ function SenDataToApp() {
         <br />
         <a
             href={
+              "https://app.dosi.world/"
+            }
+        >
+          https://app.dosi.world/
+        </a>
+        <br />
+        <a
+            href={
               "https://dosi-app-test.thanhlv.com/dosi?uri_dapps=https://google.com"
             }
         >
