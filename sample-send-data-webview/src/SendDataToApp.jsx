@@ -160,6 +160,14 @@ function SenDataToApp() {
         <br />
         <a
             href={
+              "https://app.dosi.world/profile"
+            }
+        >
+          https://app.dosi.world/profile
+        </a>
+        <br />
+        <a
+            href={
               "https://app.dosi.world/"
             }
         >
