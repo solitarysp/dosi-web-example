@@ -131,6 +131,34 @@ function SenDataToApp() {
       }}
     >
       <div>
+        <h5>Required Deeplink List</h5>
+        <h5>Preview</h5>
+        <br />
+        <a
+            href={
+              "https://app.dosi.world/"
+            }
+        >
+          https://app.dosi.world/
+        </a>
+        <a
+            href={
+              "https://app.dosi.world/market"
+            }
+        >
+          https://app.dosi.world/market
+        </a>
+        <br />
+        <a
+            href={
+              "https://app.dosi.world/profile"
+            }
+        >
+          https://app.dosi.world/profile
+        </a>
+      </div>
+
+      <div>
         <h5>Open app from depplink</h5>
 
         <a
@@ -149,30 +177,7 @@ function SenDataToApp() {
         >
           https://dosi-app-test.thanhlv.com
         </a>
-        <br />
-        <a
-            href={
-              "https://app.dosi.world/market"
-            }
-        >
-          https://app.dosi.world/market
-        </a>
-        <br />
-        <a
-            href={
-              "https://app.dosi.world/profile"
-            }
-        >
-          https://app.dosi.world/profile
-        </a>
-        <br />
-        <a
-            href={
-              "https://app.dosi.world/"
-            }
-        >
-          https://app.dosi.world/
-        </a>
+
         <br />
         <a
             href={
