@@ -171,6 +171,16 @@ function SenDataToApp() {
           Open IAB Google
         </a>
         <br />
+
+        <a
+            target="_blank"
+            href={
+              "https://google.com?openExternalBrowser=1"
+            }
+        >
+          https://google.com?openExternalBrowser=1
+        </a>
+        <br />
         <a
             href={
               "https://dosi-app-test.thanhlv.com"
