@@ -165,6 +165,7 @@ function SenDataToApp() {
         >
           https://app-citizen.store.dosi.world/1st_sale/
         </a>
+
         <br />
         <a
             href={
