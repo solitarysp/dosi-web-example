@@ -141,6 +141,8 @@ function SenDataToApp() {
           https://dosi-app-test.thanhlv.com?url=https://app.dosi.world/ ===> Open the URL in the browser if the app is not installed
         </a>
         <br />
+        <br />
+        <br />
         <a
             href={
               "https://dosi-app-test.thanhlv.com?openStorge=true&url=https://app.dosi.world/"
