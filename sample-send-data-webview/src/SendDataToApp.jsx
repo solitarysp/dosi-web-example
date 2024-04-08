@@ -135,20 +135,20 @@ function SenDataToApp() {
         <br />
         <a
             href={
-              "https://dosi-app-test.thanhlv.com?url=https://app.dosi.world/market"
+              "https://dosi-app-test.thanhlv.com/router?url=https://app.dosi.world/market"
             }
         >
-          https://dosi-app-test.thanhlv.com?url=https://app.dosi.world/market ===> Open the URL in the browser if the app is not installed
+          https://dosi-app-test.thanhlv.com/router?url=https://app.dosi.world/market ===> Open the URL in the browser if the app is not installed
         </a>
         <br />
         <br />
         <br />
         <a
             href={
-              "https://dosi-app-test.thanhlv.com?openStorge=true&url=https://app.dosi.world/market"
+              "https://dosi-app-test.thanhlv.com/router?openStorge=true&url=https://app.dosi.world/market"
             }
         >
-          https://dosi-app-test.thanhlv.com?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed
+          https://dosi-app-test.thanhlv.com/router?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed
         </a>
       </div>
 
