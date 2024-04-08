@@ -152,6 +152,14 @@ function SenDataToApp() {
         <br />
         <a
             href={
+              "https://app.dosi.world/market?open_app=1"
+            }
+        >
+          https://app.dosi.world/market?open_app=1
+        </a>
+        <br />
+        <a
+            href={
               "https://app.dosi.world/brand"
             }
         >
