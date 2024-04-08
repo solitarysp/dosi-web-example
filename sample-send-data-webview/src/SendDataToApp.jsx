@@ -131,6 +131,26 @@ function SenDataToApp() {
       }}
     >
       <div>
+        <h5>New example for deeplink use BE router</h5>
+        <br />
+        <a
+            href={
+              "https://dosi-app-test.thanhlv.com?url=https://app.dosi.world/"
+            }
+        >
+          https://dosi-app-test.thanhlv.com?url=https://app.dosi.world/ ===> Open the URL in the browser if the app is not installed
+        </a>
+        <br />
+        <a
+            href={
+              "https://dosi-app-test.thanhlv.com?openStorge=true&url=https://app.dosi.world/"
+            }
+        >
+          https://dosi-app-test.thanhlv.com?openStorge=true&url=https://app.dosi.world/ ===> Open the appstore if the app is not installed
+        </a>
+      </div>
+
+      <div>
         <h5>Required Deeplink List</h5>
         <h5>Preview</h5>
         <br />
