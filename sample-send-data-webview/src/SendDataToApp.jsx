@@ -151,6 +151,27 @@ function SenDataToApp() {
           https://dosi-app-test.thanhlv.com/router?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed
         </a>
       </div>
+      <div>
+        <h5>New example for deeplink use static html</h5>
+        <br />
+        <a
+            href={
+              "https://dosi-app-test.thanhlv.com/?url=https://app.dosi.world/market"
+            }
+        >
+          https://dosi-app-test.thanhlv.com/?url=https://app.dosi.world/market ===> Open the URL in the browser if the app is not installed
+        </a>
+        <br />
+        <br />
+        <br />
+        <a
+            href={
+              "https://dosi-app-test.thanhlv.com/?openStorge=true&url=https://app.dosi.world/market"
+            }
+        >
+          https://dosi-app-test.thanhlv.com/?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed
+        </a>
+      </div>
 
       <div>
         <h5>Required Deeplink List</h5>
