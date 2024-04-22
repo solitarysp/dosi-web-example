@@ -166,10 +166,10 @@ function SenDataToApp() {
         <br />
         <a
             href={
-              "https://links.dosi.world/?openStorge=1&targetUrl=https://dosi.world/market"
+              "https://links.dosi.world/?openStore=1&targetUrl=https://dosi.world/market"
             }
         >
-          https://links.dosi.world/?openStorge=1&targetUrl=https://dosi.world/market ===> Open the appstore if the app is not installed
+          https://links.dosi.world/?openStore=1&targetUrl=https://dosi.world/market ===> Open the appstore if the app is not installed
         </a>
       </div>
 
