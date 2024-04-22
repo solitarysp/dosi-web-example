@@ -135,20 +135,20 @@ function SenDataToApp() {
       {/*  <br />*/}
       {/*  <a*/}
       {/*      href={*/}
-      {/*        "https://dosi-app-test.thanhlv.com/router?url=https://app.dosi.world/market"*/}
+      {/*        "https://links.dosi.world/router?url=https://app.dosi.world/market"*/}
       {/*      }*/}
       {/*  >*/}
-      {/*    https://dosi-app-test.thanhlv.com/router?url=https://app.dosi.world/market ===> Open the URL in the browser if the app is not installed*/}
+      {/*    https://links.dosi.world/router?url=https://app.dosi.world/market ===> Open the URL in the browser if the app is not installed*/}
       {/*  </a>*/}
       {/*  <br />*/}
       {/*  <br />*/}
       {/*  <br />*/}
       {/*  <a*/}
       {/*      href={*/}
-      {/*        "https://dosi-app-test.thanhlv.com/router?openStorge=true&url=https://app.dosi.world/market"*/}
+      {/*        "https://links.dosi.world/router?openStorge=true&url=https://app.dosi.world/market"*/}
       {/*      }*/}
       {/*  >*/}
-      {/*    https://dosi-app-test.thanhlv.com/router?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed*/}
+      {/*    https://links.dosi.world/router?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed*/}
       {/*  </a>*/}
       {/*</div>*/}
       <div>
@@ -156,20 +156,20 @@ function SenDataToApp() {
         <br />
         <a
             href={
-              "https://dosi-app-test.thanhlv.com/?url=https://dosi.world/market"
+              "https://links.dosi.world/?targetUrl=https://dosi.world/market"
             }
         >
-          https://dosi-app-test.thanhlv.com/?url=https://dosi.world/market ===> Open the URL in the browser if the app is not installed
+          https://links.dosi.world/?targetUrl=https://dosi.world/market ===> Open the URL in the browser if the app is not installed
         </a>
         <br />
         <br />
         <br />
         <a
             href={
-              "https://dosi-app-test.thanhlv.com/?openStorge=true&url=https://dosi.world/market"
+              "https://links.dosi.world/?openStorge=1&targetUrl=https://dosi.world/market"
             }
         >
-          https://dosi-app-test.thanhlv.com/?openStorge=true&url=https://dosi.world/market ===> Open the appstore if the app is not installed
+          https://links.dosi.world/?openStorge=1&targetUrl=https://dosi.world/market ===> Open the appstore if the app is not installed
         </a>
       </div>
 
@@ -250,19 +250,19 @@ function SenDataToApp() {
         <br />
         <a
             href={
-              "https://dosi-app-test.thanhlv.com"
+              "https://links.dosi.world"
             }
         >
-          https://dosi-app-test.thanhlv.com
+          https://links.dosi.world
         </a>
 
         <br />
         <a
             href={
-              "https://dosi-app-test.thanhlv.com/dosi?uri_dapps=https://google.com"
+              "https://links.dosi.world/dosi?uri_dapps=https://google.com"
             }
         >
-          https://dosi-app-test.thanhlv.com/dosi?uri_dapps=https://google.com
+          https://links.dosi.world/dosi?uri_dapps=https://google.com
         </a>
         <br/>
         <a href={"https://myisod.page.link/qL6j"}>https://myisod.page.link/qL6j</a>
