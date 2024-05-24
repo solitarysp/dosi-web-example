@@ -2,11 +2,11 @@ import "./style.css";
 import { useCallback, useState } from "react";
 
 function SenDataToApp() {
-  window.addEventListener("message", (message) => {
-    if (message?.data) {
-      console.log("Local: " + message.data);
-    }
-  });
+  // window.addEventListener("message", (message) => {
+  //   if (message?.data) {
+  //     console.log("Local: " + message.data);
+  //   }
+  // });
 
   async function openNavigate(target, parameter) {
     if (parameter) {
@@ -130,37 +130,21 @@ function SenDataToApp() {
         minHeight: 400,
       }}
     >
-      {/*<div>*/}
-      {/*  <h5>New example for deeplink use BE router</h5>*/}
-      {/*  <br />*/}
-      {/*  <a*/}
-      {/*      href={*/}
-      {/*        "https://links.dosi.world/router?url=https://app.dosi.world/market"*/}
-      {/*      }*/}
-      {/*  >*/}
-      {/*    https://links.dosi.world/router?url=https://app.dosi.world/market ===> Open the URL in the browser if the app is not installed*/}
-      {/*  </a>*/}
-      {/*  <br />*/}
-      {/*  <br />*/}
-      {/*  <br />*/}
-      {/*  <a*/}
-      {/*      href={*/}
-      {/*        "https://links.dosi.world/router?openStorge=true&url=https://app.dosi.world/market"*/}
-      {/*      }*/}
-      {/*  >*/}
-      {/*    https://links.dosi.world/router?openStorge=true&url=https://app.dosi.world/market ===> Open the appstore if the app is not installed*/}
-      {/*  </a>*/}
-      {/*</div>*/}
+
       <div>
-        <h5>New example for deeplink use static html</h5>
+        <h5>Kaia</h5>
         <br />
-        <a
-            href={
-              "https://links.dosi.world/?targetUrl=https://dosi.world/market"
-            }
-        >
-          https://links.dosi.world/?targetUrl=https://dosi.world/market ===> Open the URL in the browser if the app is not installed
-        </a>
+        <button onClick={async () => {
+          const provider = new ethers.providers.Web3Provider(
+              window.kaia
+          );
+          const data = await provider.send("eth_getTransactionByHash", [
+            "0xdc7aea1a419721bf893e6e3ad9185b20e37c4e75ad0a85e021cca4f1c65f5b41",
+          ]);
+          console.log(data);
+
+        }}>eth_getTransactionByHash</button>
+
         <br />
         <br />
         <br />
