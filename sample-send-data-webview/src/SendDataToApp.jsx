@@ -192,7 +192,7 @@ function SenDataToApp() {
             addLogs("Error:" + error);
           }
 
-        }}>eth_getTransactionReceipt</button>
+        }}>Send coin eth Provider</button>
         <br />
         <br />
         <br />
