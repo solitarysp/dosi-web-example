@@ -166,6 +166,34 @@ function SenDataToApp() {
 
         }}>eth_getTransactionReceipt</button>
         <br />
+        <button onClick={async () => {
+          const provider = new ethers.providers.Web3Provider(
+              window.ethereum
+          );
+          await provider.send("eth_requestAccounts", []);
+          const signer = provider.getSigner();
+          const tx = {
+            to: "0x55c59eeee480df68f88b106ee54d15a14c6ef951",
+            // Chuyển đổi số lượng sang Wei
+            value: ethers.utils.parseEther("0.1"),
+          };
+
+          try {
+            // Gửi giao dịch
+            const txResponse = await signer.sendTransaction(tx);
+            addLogs("Transaction hash:" + txResponse.hash);
+
+            // Chờ giao dịch được xác nhận
+            const receipt = await txResponse.wait();
+            addLogs(
+                "Transaction confirmed in block:" + receipt.blockNumber
+            );
+          } catch (error) {
+            addLogs("Error:" + error);
+          }
+
+        }}>eth_getTransactionReceipt</button>
+        <br />
         <br />
         <br />
         <a
