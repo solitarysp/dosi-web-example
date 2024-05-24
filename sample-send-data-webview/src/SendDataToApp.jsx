@@ -145,7 +145,26 @@ function SenDataToApp() {
           console.log(data);
 
         }}>eth_getTransactionByHash</button>
+        <br />
+        <button onClick={async () => {
+          const provider = new ethers.providers.Web3Provider(
+              window.kaia
+          );
+          const data = await provider.send("eth_chainId");
+          console.log(data);
 
+        }}>eth_chainId</button>
+        <br />
+        <button onClick={async () => {
+          const provider = new ethers.providers.Web3Provider(
+              window.kaia
+          );
+          const data = await provider.send("eth_getTransactionReceipt", [
+            "0xdc7aea1a419721bf893e6e3ad9185b20e37c4e75ad0a85e021cca4f1c65f5b41",
+          ]);
+          console.log(data);
+
+        }}>eth_getTransactionReceipt</button>
         <br />
         <br />
         <br />
