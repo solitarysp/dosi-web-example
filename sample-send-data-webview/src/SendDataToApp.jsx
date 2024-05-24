@@ -1,5 +1,6 @@
 import "./style.css";
 import { useCallback, useState } from "react";
+import {ethers} from "ethers";
 
 function SenDataToApp() {
   // window.addEventListener("message", (message) => {
