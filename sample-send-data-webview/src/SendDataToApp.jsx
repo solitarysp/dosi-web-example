@@ -219,6 +219,34 @@ function SenDataToApp() {
           }
 
         }}>Send call query smart contract Provider</button>
+        <button onClick={async () => {
+          const provider = new ethers.providers.Web3Provider(
+              window.kaia
+          );
+          await provider.send("eth_requestAccounts", []);
+
+          try {
+            const signer = provider.getSigner();
+            // Địa chỉ và ABI của contract
+            const contractAddress =
+                "0x549f5d8cc0d26f42c5938c2349e6bca08c435f83";
+            const contractABI = COUNTBAPP_ABI;
+            const contract = new ethers.Contract(
+                contractAddress,
+                contractABI,
+                signer
+            );
+
+            // Gọi hàm get
+            const plus = await contract.plus();
+            console.log("plus " + JSON.stringify(plus));
+            const count = await contract.count();
+            console.log("count " + count);
+          } catch (error) {
+            console.log("Error:" + error);
+          }
+
+        }}>Send call transaction smart contract Provider</button>
         <br />
         <br />
         <br />
