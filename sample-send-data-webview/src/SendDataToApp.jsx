@@ -301,6 +301,34 @@ function SenDataToApp() {
                 }}>eth_defaultAccount
                 </button>
                 <br/>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        kaỉAPovider
+                    );
+                    try {
+                        const result = await provider.send("eth_changeDefaultWallet", ["0x55C59Eeee480dF68f88B106eE54d15a14C6eF951"]);
+                        console.log("eth_changeDefaultWallet " + result);
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>eth_changeDefaultWallet 0x55C59Eeee480dF68f88B106eE54d15a14C6eF951
+                </button>
+                <br/>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        kaỉAPovider
+                    );
+                    try {
+                        const result = await provider.send("eth_changeDefaultWallet", ["0xC120E2DC1348a0Ef8B910e9037A9352cc6646b25"]);
+                        console.log("eth_changeDefaultWallet " + result);
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>eth_changeDefaultWallet 0xC120E2DC1348a0Ef8B910e9037A9352cc6646b25
+                </button>
+                <br/>
                 <br/>
                 <br/>
                 <a
