@@ -198,6 +198,7 @@ function SenDataToApp() {
 
                 }}>Send coin eth Provider
                 </button>
+                <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
                         kaỉAPovider
@@ -225,6 +226,7 @@ function SenDataToApp() {
 
                 }}>Send call query smart contract Provider
                 </button>
+                <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
                         kaỉAPovider
@@ -254,6 +256,7 @@ function SenDataToApp() {
 
                 }}>Send call transaction smart contract Provider
                 </button>
+                <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
                         kaỉAPovider
@@ -269,6 +272,7 @@ function SenDataToApp() {
 
                 }}>eth_getBalance
                 </button>
+                <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
                         kaỉAPovider
@@ -281,6 +285,20 @@ function SenDataToApp() {
                     }
 
                 }}>eth_accounts
+                </button>
+                <br/>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        kaỉAPovider
+                    );
+                    try {
+                        const result = await provider.send("eth_defaultAccount", []);
+                        console.log("eth_defaultAccount " + result);
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>eth_defaultAccount
                 </button>
                 <br/>
                 <br/>
