@@ -8,6 +8,7 @@ function SenDataToApp() {
     //     console.log("Local: " + message.data);
     //   }
     // });
+    const kaỉAPovider = window.dosiKaia;
 
     async function openNavigate(target, parameter) {
         if (parameter) {
@@ -137,7 +138,7 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     const data = await provider.send("eth_getTransactionByHash", [
                         "0xdc7aea1a419721bf893e6e3ad9185b20e37c4e75ad0a85e021cca4f1c65f5b41",
@@ -149,7 +150,7 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     const data = await provider.send("eth_chainId");
                     console.log(data);
@@ -159,7 +160,7 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     const data = await provider.send("eth_getTransactionReceipt", [
                         "0xdc7aea1a419721bf893e6e3ad9185b20e37c4e75ad0a85e021cca4f1c65f5b41",
@@ -171,7 +172,7 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     await provider.send("eth_requestAccounts", []);
                     const signer = provider.getSigner();
@@ -199,7 +200,7 @@ function SenDataToApp() {
                 </button>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     await provider.send("eth_requestAccounts", []);
 
@@ -226,7 +227,7 @@ function SenDataToApp() {
                 </button>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     await provider.send("eth_requestAccounts", []);
 
@@ -255,7 +256,7 @@ function SenDataToApp() {
                 </button>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        window.kaia
+                        kaỉAPovider
                     );
                     await provider.send("eth_requestAccounts", []);
                     try {
@@ -267,6 +268,19 @@ function SenDataToApp() {
                     }
 
                 }}>eth_getBalance
+                </button>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        kaỉAPovider
+                    );
+                    try {
+                        const result = await provider.send("eth_accounts", []);
+                        console.log("eth_accounts " + result);
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>eth_accounts
                 </button>
                 <br/>
                 <br/>
