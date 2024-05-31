@@ -8,7 +8,7 @@ function SenDataToApp() {
     //     console.log("Local: " + message.data);
     //   }
     // });
-    const kaỉAPovider = window.dosiKaia;
+    const kaỉAPovider = window.kaia;
 
     async function openNavigate(target, parameter) {
         if (parameter) {
