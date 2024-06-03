@@ -326,6 +326,36 @@ function SenDataToApp() {
 
                 }}>eth_changeDefaultWallet 0xC120E2DC1348a0Ef8B910e9037A9352cc6646b25
                 </button>
+
+                <br/>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        window.kaia
+                    );
+                    await provider.send("eth_requestAccounts", []);
+                    const signer = provider.getSigner();
+                    const tx = {
+                        to: "0x55c59eeee480df68f88b106ee54d15a14c6ef951",
+                        value: ethers.utils.parseEther("0.1"),
+                    };
+
+                    try {
+                        const txSign = await signer.signTransaction(tx);
+                        console.log("txSign:" + txSign);
+
+                        /*                   const txResponse = await provider.send("eth_requestAccounts", []);
+                                           console.log("Transaction hash:" + txResponse.hash);
+
+                                           const receipt = await txResponse.wait();
+                                           console.log(
+                                               "Transaction confirmed in block:" + receipt.blockNumber
+                                           );*/
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>Send coin eth Provider for sign send send rawTransaction
+                </button>
                 <br/>
                 <br/>
                 <br/>
