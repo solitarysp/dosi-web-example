@@ -138,7 +138,7 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        kaỉAPovider
+                        window.kaia
                     );
                     const data = await provider.send("eth_getTransactionByHash", [
                         "0xdc7aea1a419721bf893e6e3ad9185b20e37c4e75ad0a85e021cca4f1c65f5b41",
@@ -172,22 +172,19 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        kaỉAPovider
+                        window.kaia
                     );
                     await provider.send("eth_requestAccounts", []);
                     const signer = provider.getSigner();
                     const tx = {
                         to: "0x55c59eeee480df68f88b106ee54d15a14c6ef951",
-                        // Chuyển đổi số lượng sang Wei
                         value: ethers.utils.parseEther("0.1"),
                     };
 
                     try {
-                        // Gửi giao dịch
                         const txResponse = await signer.sendTransaction(tx);
                         console.log("Transaction hash:" + txResponse.hash);
 
-                        // Chờ giao dịch được xác nhận
                         const receipt = await txResponse.wait();
                         console.log(
                             "Transaction confirmed in block:" + receipt.blockNumber
@@ -201,7 +198,7 @@ function SenDataToApp() {
                 <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
-                        kaỉAPovider
+                        window.kaia
                     );
                     await provider.send("eth_requestAccounts", []);
 
@@ -245,9 +242,10 @@ function SenDataToApp() {
                             signer
                         );
 
-                        // Gọi hàm get
+                        // call transaction
                         const plus = await contract.plus();
                         console.log("plus " + JSON.stringify(plus));
+                        // call query
                         const count = await contract.count();
                         console.log("count " + count);
                     } catch (error) {
