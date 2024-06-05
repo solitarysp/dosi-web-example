@@ -343,6 +343,24 @@ function SenDataToApp() {
                 }}>eth_changeDefaultWallet 0xC120E2DC1348a0Ef8B910e9037A9352cc6646b25
                 </button>
                 <br/>
+                <button onClick={async () => {
+                    openNavigate("importKaiaWallet")
+
+                }}>Open Import KAIA Private key
+                </button>
+                <br/>
+                <button onClick={async () => {
+                    openNavigate("switchAccountKaia")
+
+                }}>switch Account Kaia for payment
+                </button>
+                <br/>
+                <button onClick={async () => {
+                    openNavigate("walletAddressListKaia")
+
+                }}>wallet Address List Kaia
+                </button>
+                <br/>
                 <br/>
                 <br/>
                 <a
