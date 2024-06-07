@@ -361,6 +361,12 @@ function SenDataToApp() {
                 }}>wallet Address List Kaia
                 </button>
                 <br/>
+                <button onClick={async () => {
+                    openNavigate("SwapToKaia")
+
+                }}>Swap To Kaia
+                </button>
+                <br/>
                 <br/>
                 <br/>
                 <a
