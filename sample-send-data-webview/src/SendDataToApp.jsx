@@ -252,7 +252,49 @@ function SenDataToApp() {
                         console.log("Error:" + error);
                     }
 
-                }}>Send call transaction smart contract Provider
+                }}>Send call countApp transaction smart contract Provider
+                </button>
+                <br/>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        kaỉAPovider
+                    );
+                    await provider.send("eth_requestAccounts", []);
+
+                    try {
+                        const signer = provider.getSigner();
+                        // Địa chỉ và ABI của contract
+                        const contractAddress =
+                            "0x44c71b462c06b8e09f35c0b7e577ef99b0cbf992";
+                        const contractABI = PAYMENT_ABI;
+                        const contract = new ethers.Contract(
+                            contractAddress,
+                            contractABI,
+                            signer
+                        );
+
+                        // call transaction
+                        const plus = await contract.pay(
+                            '1231231312321', // _paymentId
+                            [   // _payments
+                                {
+                                    recipient: '0x96db6a7498BD71dF8a1c19B7cb3DD16dfb6f5D54', // to 01
+                                    amount: '20000000000000000' // amount 01
+                                },
+                                {
+                                    recipient: '0x62a0C1a7814c4fb8DA1d3B83A4DEC6Fb235400c8', // to 02
+                                    amount: '10000000000000000' // amount 02
+                                },
+                            ],
+                            123123, // _blockNumberThreshold
+                        );
+                        console.log("plus " + JSON.stringify(plus));
+                        console.log("count " + count);
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>Send call payment transaction smart contract Provider
                 </button>
                 <br/>
                 <button onClick={async () => {
@@ -1091,5 +1133,132 @@ export const COUNTBAPP_ABI = [
         type: "function",
     },
 ];
+
+export const PAYMENT_ABI = [
+    {
+        inputs: [
+            {
+                internalType: "uint256",
+                name: "blockNumber",
+                type: "uint256",
+            },
+        ],
+        name: "ExceededBlockNumberThreshold",
+        type: "error",
+    },
+    {
+        inputs: [],
+        name: "PaymentFailed",
+        type: "error",
+    },
+    {
+        inputs: [],
+        name: "PaymentFailedWithIllegalAmount",
+        type: "error",
+    },
+    {
+        inputs: [
+            {
+                internalType: "bytes32",
+                name: "hash",
+                type: "bytes32",
+            },
+        ],
+        name: "UsedHash",
+        type: "error",
+    },
+    {
+        anonymous: false,
+        inputs: [
+            {
+                indexed: true,
+                internalType: "uint256",
+                name: "paymentId",
+                type: "uint256",
+            },
+            {
+                components: [
+                    {
+                        internalType: "address payable",
+                        name: "recipient",
+                        type: "address",
+                    },
+                    {
+                        internalType: "uint256",
+                        name: "amount",
+                        type: "uint256",
+                    },
+                ],
+                indexed: false,
+                internalType: "struct IPaymentSplitter.Payment[]",
+                name: "payment",
+                type: "tuple[]",
+            },
+        ],
+        name: "Paid",
+        type: "event",
+    },
+    {
+        inputs: [
+            {
+                internalType: "uint256",
+                name: "_paymentId",
+                type: "uint256",
+            },
+            {
+                components: [
+                    {
+                        internalType: "address payable",
+                        name: "recipient",
+                        type: "address",
+                    },
+                    {
+                        internalType: "uint256",
+                        name: "amount",
+                        type: "uint256",
+                    },
+                ],
+                internalType: "struct IPaymentSplitter.Payment[]",
+                name: "_payments",
+                type: "tuple[]",
+            },
+            {
+                internalType: "uint256",
+                name: "_blockNumberThreshold",
+                type: "uint256",
+            },
+        ],
+        name: "pay",
+        outputs: [
+            {
+                internalType: "bytes32",
+                name: "paymentHash",
+                type: "bytes32",
+            },
+        ],
+        stateMutability: "payable",
+        type: "function",
+    },
+    {
+        inputs: [
+            {
+                internalType: "bytes32",
+                name: "",
+                type: "bytes32",
+            },
+        ],
+        name: "used",
+        outputs: [
+            {
+                internalType: "bool",
+                name: "",
+                type: "bool",
+            },
+        ],
+        stateMutability: "view",
+        type: "function",
+    },
+];
+
 
 export default SenDataToApp;
