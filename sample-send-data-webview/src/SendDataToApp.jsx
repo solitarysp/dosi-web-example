@@ -137,7 +137,7 @@ function SenDataToApp() {
                 <h5>Kaia</h5>
                 <br/>
                 <button onClick={() => openNavigate("sendKaia")}>Open Send Kaia</button>
-
+                <br/>
                 <button onClick={async () => {
                     const provider = new ethers.providers.Web3Provider(
                         window.kaia
