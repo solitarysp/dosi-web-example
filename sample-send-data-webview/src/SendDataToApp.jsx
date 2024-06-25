@@ -9,6 +9,10 @@ function SenDataToApp() {
     //   }
     // });
     const kaỉAPovider = window.kaia;
+    window.testKaiaDosiProvider = new ethers.providers.Web3Provider(
+        window.kaia
+    );
+    ;
 
     async function openNavigate(target, parameter) {
         if (parameter) {
