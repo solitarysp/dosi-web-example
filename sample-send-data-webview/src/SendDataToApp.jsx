@@ -255,7 +255,7 @@ function SenDataToApp() {
                         const count = await contract.count();
                         console.log("count " + count);
                     } catch (error) {
-                        console.log("Error:" + error);
+                        console.log("Error:" + error.message);
                     }
 
                 }}>Send call countApp transaction smart contract Provider
