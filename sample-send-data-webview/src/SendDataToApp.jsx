@@ -297,7 +297,7 @@ function SenDataToApp() {
                         console.log("plus " + JSON.stringify(plus));
                         console.log("count " + count);
                     } catch (error) {
-                        console.log("Error:" + error);
+                        console.log("Error:" + error.message);
                     }
 
                 }}>Send call payment transaction smart contract Provider
