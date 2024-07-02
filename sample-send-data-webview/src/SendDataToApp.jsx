@@ -308,6 +308,48 @@ function SenDataToApp() {
                         kaỉAPovider
                     );
                     await provider.send("eth_requestAccounts", []);
+
+                    try {
+                        const signer = provider.getSigner();
+                        // Địa chỉ và ABI của contract
+                        const contractAddress =
+                            "0x44c71b462c06b8e09f35c0b7e577ef99b0cbf992";
+                        const contractABI = PAYMENT_ABI;
+                        const contract = new ethers.Contract(
+                            contractAddress,
+                            contractABI,
+                            signer
+                        );
+
+                        // call transaction
+                        const plus = await contract.estimateGas.pay(
+                            '1231231312321', // _paymentId
+                            [   // _payments
+                                {
+                                    recipient: '0x96db6a7498BD71dF8a1c19B7cb3DD16dfb6f5D54', // to 01
+                                    amount: '20000000000000000' // amount 01
+                                },
+                                {
+                                    recipient: '0x62a0C1a7814c4fb8DA1d3B83A4DEC6Fb235400c8', // to 02
+                                    amount: '10000000000000000' // amount 02
+                                },
+                            ],
+                            123123, // _blockNumberThreshold
+                        );
+                        console.log("plus " + JSON.stringify(plus));
+                        console.log("count " + count);
+                    } catch (error) {
+                        console.log("Error:" + error);
+                    }
+
+                }}>Send call payment transaction ET gasg smart contract Provider
+                </button>
+                <br/>
+                <button onClick={async () => {
+                    const provider = new ethers.providers.Web3Provider(
+                        kaỉAPovider
+                    );
+                    await provider.send("eth_requestAccounts", []);
                     try {
                         const signer = provider.getSigner();
 
