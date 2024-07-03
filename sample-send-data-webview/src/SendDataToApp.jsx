@@ -8,6 +8,10 @@ function SenDataToApp() {
     //     console.log("Local: " + message.data);
     //   }
     // });
+    window.addEventListener("dosiapp_eth_keystorechange", (message) => {
+        console.log("dosiapp_eth_keystorechange: " + JSON.stringify(message));
+
+    });
     const kaỉAPovider = window.kaia;
     window.testKaiaDosiProvider = new ethers.providers.Web3Provider(
         window.kaia
@@ -284,15 +288,95 @@ function SenDataToApp() {
                             '1231231312321', // _paymentId
                             [   // _payments
                                 {
-                                    recipient: '0x96db6a7498BD71dF8a1c19B7cb3DD16dfb6f5D54', // to 01
-                                    amount: '20000000000000000' // amount 01
+                                    recipient: '0x636271c78ad47b4311e6d012a37b450ce1574b95', // to 01
+                                    amount: '18375305950000000000' // amount 01
                                 },
                                 {
-                                    recipient: '0x62a0C1a7814c4fb8DA1d3B83A4DEC6Fb235400c8', // to 02
-                                    amount: '10000000000000000' // amount 02
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
                                 },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                },
+                                {
+                                    recipient: '0x392e024f1bd2f40e153972ebd36cd0a2e81267db', // to 02
+                                    amount: '18375305950000000000' // amount 02
+                                }
                             ],
-                            123123, // _blockNumberThreshold
+                            158333278, // _blockNumberThreshold,
                         );
                         console.log("plus " + JSON.stringify(plus));
                         console.log("count " + count);
