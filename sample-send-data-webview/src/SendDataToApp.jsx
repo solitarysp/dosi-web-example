@@ -18,7 +18,7 @@ function SenDataToApp() {
           window.kaia
       );
   }catch (e) {
-      
+
   }
 
     async function openNavigate(target, parameter) {
@@ -147,6 +147,7 @@ function SenDataToApp() {
             <div>
                 <h5>Kaia</h5>
                 <a href={window.location.href} target="_blank">Open this page for new window</a>
+                <a href="app.dosi://closeIAB" target="_blank">Close IAB</a>
                 <br/>
                 <button onClick={() => openNavigate("returnKaia")}>Open return Kaia</button>
                 <br/>
