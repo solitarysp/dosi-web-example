@@ -13,10 +13,13 @@ function SenDataToApp() {
 
     });
     const kaỉAPovider = window.kaia;
-    window.testKaiaDosiProvider = new ethers.providers.Web3Provider(
-        window.kaia
-    );
-    ;
+  try {
+      window.testKaiaDosiProvider = new ethers.providers.Web3Provider(
+          window.kaia
+      );
+  }catch (e) {
+      
+  }
 
     async function openNavigate(target, parameter) {
         if (parameter) {
