@@ -560,55 +560,15 @@ function SenDataToApp() {
 
             <div>
                 <h5>Required Deeplink List</h5>
-                <h5>Preview</h5>
                 <br/>
                 <a
                     href={
-                        "https://app.dosi.world/"
+                        "https://app-links.dosi.world/?targetUrl=https%3A%2F%2Fdosi-profile.line-apps-beta.com%2Faccount%2Fseller-information&openStore=0"
                     }
                 >
-                    https://app.dosi.world/
+                    https://app-links.dosi.world/?targetUrl=https%3A%2F%2Fdosi-profile.line-apps-beta.com%2Faccount%2Fseller-information&openStore=0
                 </a>
-                <br/>
-                <a
-                    href={
-                        "https://app.dosi.world/market?test=11"
-                    }
-                >
-                    https://app.dosi.world/market?test=11
-                </a>
-                <br/>
-                <a
-                    href={
-                        "https://app.dosi.world/market?open_app=1"
-                    }
-                >
-                    https://app.dosi.world/market?open_app=1
-                </a>
-                <br/>
-                <a
-                    href={
-                        "https://app.dosi.world/brand"
-                    }
-                >
-                    https://app.dosi.world/brand
-                </a>
-                <br/>
-                <a
-                    href={
-                        "https://app.dosi.world/profile"
-                    }
-                >
-                    https://app.dosi.world/profile
-                </a>
-                <br/>
-                <a
-                    href={
-                        "https://app-citizen.store.dosi.world/ko-KR/1st_sale"
-                    }
-                >
-                    https://app-citizen.store.dosi.world/ko-KR/1st_sale
-                </a>
+
             </div>
 
             <div>
