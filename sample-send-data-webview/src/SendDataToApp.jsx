@@ -546,8 +546,16 @@ function SenDataToApp() {
                 }}>Swap To Kaia
                 </button>
                 <br/>
+                <a
+                    href={
+                        "https://app-links.dosi.world/?targetUrl=https%3A%2F%2Fdosi-profile.line-apps-beta.com%2Fapp%2Fswap-kaia&openStore=0"
+                    }
+                >
+                    Swap Kaia beta deeplink
+                </a>
                 <br/>
                 <br/>
+
                 <a
                     href={
                         "https://links.dosi.world/?openStore=1&targetUrl=https://dosi.world/market"
