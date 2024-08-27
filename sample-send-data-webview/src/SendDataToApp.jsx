@@ -264,6 +264,13 @@ function SenDataToApp() {
                         const transactionReceipt =  await transaction.wait();
                         console.log("transactionReceipt: ",transactionReceipt);
 
+                        if(transactionReceipt.status === 1) {
+                            console.log("TX thanh cong");
+                        }else {
+                            console.log("TX that bai");
+                        }
+
+
                         // call query
                         const count = await contract.count();
                         console.log("count " + count);
