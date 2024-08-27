@@ -558,6 +558,7 @@ function SenDataToApp() {
                     href={
                         "https://nid.naver.com/"
                     }
+                    target={"_blank"}
                 >
                     https://nid.naver.com/
                 </a>
