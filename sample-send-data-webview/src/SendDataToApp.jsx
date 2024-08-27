@@ -260,7 +260,7 @@ function SenDataToApp() {
                         // call transaction
                         const transaction = await contract.plus();
                         console.log("plus " + JSON.stringify(transaction));
-                        console.log("Wating ");
+                        console.log("wait ");
                         const transactionReceipt =  await transaction.wait();
                         console.log("transactionReceipt: ",transactionReceipt);
 
