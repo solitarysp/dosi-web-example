@@ -258,8 +258,12 @@ function SenDataToApp() {
                         );
 
                         // call transaction
-                        const plus = await contract.plus();
-                        console.log("plus " + JSON.stringify(plus));
+                        const transaction = await contract.plus();
+                        console.log("plus " + JSON.stringify(transaction));
+                        console.log("Wating ");
+                        const transactionReceipt =  await transaction.wait();
+                        console.log("transactionReceipt: "+transactionReceipt);
+
                         // call query
                         const count = await contract.count();
                         console.log("count " + count);
