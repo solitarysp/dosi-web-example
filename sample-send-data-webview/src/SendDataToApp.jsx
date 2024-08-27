@@ -554,6 +554,14 @@ function SenDataToApp() {
                     Swap Kaia beta deeplink
                 </a>
                 <br/>
+                <a
+                    href={
+                        "https://nid.naver.com/"
+                    }
+                >
+                    https://nid.naver.com/
+                </a>
+                <br/>
                 <br/>
 
                 <a
