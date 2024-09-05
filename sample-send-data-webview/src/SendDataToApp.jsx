@@ -147,6 +147,9 @@ function SenDataToApp() {
             <div>
                 <h5>Kaia</h5>
                 <a href={window.location.href} target="_blank">Open this page for new window</a>
+                <br/>
+                <a href={`app.dosi://dapp?uri_dapps=${window.location.href}`} target="_blank">Open this page on dosi app</a>
+                <br/>
                 <a href="app.dosi://closeIAB" target="_blank">Close IAB</a>
                 <br/>
                 <button onClick={() => openNavigate("returnKaia")}>Open return Kaia</button>
