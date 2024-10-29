@@ -34,6 +34,10 @@ function SenDataToApp() {
         }
     }
 
+    async function webviewAction(target, parameter) {
+        dosiVault.webviewAction(target,parameter);
+    }
+
     async function hideMenu() {
         const data = await dosiVault.webviewAction("menuControl", {
             show: false,
@@ -679,6 +683,9 @@ function SenDataToApp() {
             <div>
                 <h5>Flow login logout</h5>
                 <button onClick={() => openNavigate("doLogin")}>Do Login</button>
+                <button onClick={() => openNavigate("doLogin", {redirectTarget: "home"})}>Do Login redirectTarget home</button>
+                <button onClick={() => webviewAction("login-sns")}>login-sns</button>
+                <button onClick={() => webviewAction("login-sns",{redirectTarget: "home"})}>login-sns redirectTarget home</button>
                 <button onClick={() => openNavigate("createFNSAWallet")}>Do Set password</button>
                 <button onClick={() => openNavigate("ShareDMnemonicReveal")}>ShareD</button>
                 <button onClick={() => openIAB("https://www.google.com/")}>Open IAB</button>
